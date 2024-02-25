@@ -18,7 +18,6 @@ export default {
 	border-style	: solid;
 	border-width	: 1px !important;
 	border-radius	: 10px;
-	color			: var( --primary-color-color	);
 	margin			: 5px;
 }
 </style>

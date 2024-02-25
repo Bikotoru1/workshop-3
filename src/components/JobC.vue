@@ -7,31 +7,48 @@
 		alt		="icon" 
 		width	="70"
 	/>
+
 	<div id="container">
 		<div id="name-and-requirements">
 			<h2>{{ name }}</h2>
+
 			<RequirementC 
 				v-for	="( requirement, index ) in requirements" 
 				:key	="index" 
-				:text	="requirement" 
+				:text	="requirement"
 			/>
 		</div>
+
+		<DetailsC
+			:company		="company"
+			:loction		="loction"
+			:salary			="salary"
+			:vacants		="vacants"
+			:creation-date	="creationDate"
+		/>
 	</div>
   </div>
 </template>
 
 <script>
 import RequirementC from "./RequirementC.vue"
+import DetailsC from "./DetailsC.vue"
 
 export default {
   name: 'JobC',
   components:{
-	RequirementC
+	RequirementC,
+	DetailsC
   },
   props:{
 	icon		: String,
 	name		: String,
-	requirements: []
+	company		: String,
+	loction		: String,
+	salary		: String,
+	vacants		: Number,
+	creationDate: Date,
+	requirements: [],
   }
 }
 </script>
