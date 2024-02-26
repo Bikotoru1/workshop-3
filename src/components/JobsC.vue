@@ -1,19 +1,23 @@
 <template>
-  <div id="main-content">
-	<ul>
-		<JobC
-			v-for			="( job, index ) in jobs" 
-			:key			="index"
-			:icon			="job.icon"
-			:name			="job.name"
-			:requirements	="job.requirements"
-			:company		="job.company"
-			:loction		="job.location"
-			:salary			="job.salary"
-			:vacants		="job.vacants"
-			:creation-date	="job.creationDate"
-		/>
-	</ul>
+  <div id="main-content" class="mx-auto container-fluid">
+	<div clss="row mt-2 no-gutters">
+		<div class="px-0 col-10">
+			<ul>
+				<JobC
+					v-for			="( job, index ) in jobs" 
+					:key			="index"
+					:icon			="job.icon"
+					:name			="job.name"
+					:requirements	="job.requirements"
+					:company		="job.company"
+					:loction		="job.location"
+					:salary			="job.salary"
+					:vacants		="job.vacants"
+					:creation-date	="job.creationDate"
+				/>
+			</ul>
+		</div>
+	</div>
   </div>
 </template>
 
