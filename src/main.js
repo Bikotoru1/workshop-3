@@ -3,8 +3,6 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-const app = new Vue({
+new Vue({
   render: h => h(App),
-})
-
-app.$mount('#app')
+}).$mount('#app')
