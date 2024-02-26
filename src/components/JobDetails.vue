@@ -29,7 +29,7 @@
 
 <script>
 export default {
-	name: 'DetailsC',
+	name: 'JobDetails',
 	props: {
 		company: String,
 		location: String,
