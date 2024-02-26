@@ -1,5 +1,5 @@
 <template>
-	<div id="main-content">
+	<div id="job-listing">
 		<img
 			id="icon"
 			height="70"
@@ -10,20 +10,20 @@
 
 		<div id="container">
 			<div id="name-and-requirements">
-				<h2>{{ name }}</h2>
+				<h2 id="name">{{ name }}</h2>
 
-				<RequirementC
+				<JobRequirement
 					v-for="(requirement, index) in requirements"
 					:key="index"
 					:text="requirement"
 				/>
 			</div>
 
-			<DetailsC
+			<JobDetails
 				:company="company"
-				:loction="loction"
+				:location="location"
 				:salary="salary"
-				:vacants="vacants"
+				:vacancies="vacancies"
 				:creation-date="creationDate"
 			/>
 		</div>
@@ -31,60 +31,76 @@
 </template>
 
 <script>
-import RequirementC from "./JobRequirement.vue";
-import DetailsC from "./JobDetails.vue";
+import JobRequirement from "./JobRequirement.vue";
+import JobDetails from "./JobDetails.vue";
 
 export default {
 	name: "JobListing",
 	components: {
-		RequirementC,
-		DetailsC,
+		JobRequirement,
+		JobDetails,
 	},
 	props: {
 		icon: String,
 		name: String,
 		company: String,
-		loction: String,
+		location: String,
 		salary: String,
-		vacants: Number,
+		vacancies: Number,
 		creationDate: Date,
-		requirements: [],
+		requirements: Array,
 	},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#main-content{
-	align-items		: center;
-	background-color: var( --secondary-color 		);
-	border-color	: var( --primary-color-color	);
-	border-width	: 10px;
-	color			: var( --primary-color-color	);
-	display			: flex;
-	flex-direction	: row;
-	justify-content	: start;
-	margin			: 15px;
-	padding			: 5px;
-	transition:  box-shadow 0.2s ease-in-out;
+#job-listing {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	align-self: center;
+	background-color: var(--secondary-color);
+	border-color: var(--primary-color);
+	border-width: 10px;
+	color: var(--tertiary-color);
+	margin: 15px;
+	padding: 5px;
+	/* box-shadow: 0 0 10px var(--secondary-color); */
+	transition: box-shadow 0.2s ease-in-out;
 }
 
-#main-content:hover{
-	box-shadow: 10px 10px #ffffff50;	
+#job-listing:hover {
+	box-shadow: 0 0 10px var(--secondary-color);
 }
 
-#icon{
+
+#icon {
+	filter: drop-shadow(0 0 5px var(--tertiary-color));
+	margin: auto;
+	padding: 20px;
+}
+
+#container {
+	display: flex;
 	margin: 10px;
+	flex-direction: column;
 }
 
-#container{
-	display			: flex;
-	margin			: 10px;
-	flex-direction	: column;
+#name-and-requirements {
+	display: flex;
+	margin: 5px;
 }
 
-#name-and-requirements{
-	display	: flex;
-	margin	: 5px;
+#name {
+	margin: auto;
+	padding: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+#name:hover {
+	font-size: 20.2px;
+	color: var(--primary-color);
 }
 </style>
