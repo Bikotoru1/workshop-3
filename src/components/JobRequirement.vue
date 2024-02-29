@@ -39,4 +39,15 @@ export default {
 	text-decoration: none !important;
 	text-decoration-line: none;
 }
+
+#job-requirement:hover {
+	background-color: var(--tertiary-color);
+	color: var(--secondary-color);
+}
+
+
+h2,
+p {
+	margin: auto;
+}
 </style>

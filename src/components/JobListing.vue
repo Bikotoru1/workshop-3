@@ -1,5 +1,5 @@
 <template>
-	<div id="div1" class="mx-auto container-fluid">
+	<div id="job-listing">
 		<div id="div2" clss="row mt-2 no-gutters">
 			<div id="div3" class="px-0 col-10">
 				<ul id="ul1">
