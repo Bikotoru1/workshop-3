@@ -37,8 +37,8 @@ export default {
 }
 
 
-h2, p {
+h2,
+p {
 	margin: auto;
 }
-
 </style>

@@ -1,31 +1,16 @@
 <template>
 	<div id="job-listing">
-		<img
-			id="icon"
-			height="70"
-			:src="icon"
-			alt="icon"
-			width="70"
-		/>
+		<img id="icon" height="70" :src="icon" alt="icon" width="70" />
 
 		<div id="container">
 			<div id="name-and-requirements">
 				<h2 id="name">{{ name }}</h2>
 
-				<JobRequirement
-					v-for="(requirement, index) in requirements"
-					:key="index"
-					:text="requirement"
-				/>
+				<JobRequirement v-for="(requirement, index) in requirements" :key="index" :text="requirement" />
 			</div>
 
-			<JobDetails
-				:company="company"
-				:location="location"
-				:salary="salary"
-				:vacancies="vacancies"
-				:creation-date="creationDate"
-			/>
+			<JobDetails :company="company" :location="location" :salary="salary" :vacancies="vacancies"
+				:creation-date="creationDate" />
 		</div>
 	</div>
 </template>
