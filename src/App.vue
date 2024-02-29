@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<ul>
+		<ul class="row mt-2 no-gutters px-0 col-10">
 			<JobListing :jobs="jobs" />
 		</ul>
 	</div>
@@ -260,4 +260,5 @@ h6 {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
-}</style>
+}
+</style>

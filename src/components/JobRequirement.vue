@@ -1,7 +1,6 @@
 <template>
-	<div class="skill-tag text-truncate border border-dark text-dark text-capitalize" id="content" role="button">
-		<span></span>
-		{{ text }}
+	<div class="skill-tag text-truncate justify-content-evenly"	id="content" role="button">
+		<span>{{ text }}</span>
 	</div>
 </template>
 
@@ -16,38 +15,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#content {
-	font-size: 0.8em;
-	margin-bottom: 0px !important;
-}
+	#content {
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+		font-size: 0.7em;
+		margin:  0.5rem 0.5rem 0.5rem 0;
+		padding: 0.2rem 0.5rem;
 
-.skill-tag {
-	border: 1px solid var(--primary-color);
-	border-radius: 10px;
-	font-size: 12px;
-	color: var(--primary-color);
-	text-transform: uppercase;
-	-moz-text-align-last: left;
-	text-align-last: left;
-	display: inline-block;
-	margin-right: 3px;
-	margin-bottom: 3px;
-	padding: 0 0.5rem;
-	pointer-events: none;
-	cursor: pointer;
-	transition: all .2s ease;
-	text-decoration: none !important;
-	text-decoration-line: none;
-}
+	}
 
-#job-requirement:hover {
-	background-color: var(--tertiary-color);
-	color: var(--secondary-color);
-}
+	.skill-tag {
+		color: var(--tertiary-color);
+		padding: 0.2rem 0.5rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--tertiary-color);
+		transition: all 0.3s ease-in-out;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+	}
 
+	.skill-tag:hover {
+		box-shadow: 0 0 5px 0 var(--tertiary-color);
+		border: 1px solid var(--primary-color);
+		color: var(--primary-color);
+		cursor: pointer;
+	}
 
-h2,
-p {
-	margin: auto;
-}
+	h2,
+	p {
+		margin: auto;
+	}
 </style>

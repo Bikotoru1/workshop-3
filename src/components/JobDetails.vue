@@ -1,5 +1,5 @@
 <template>
-	<div class="row pl-md-2 mt-1 flex-column flex-md-row" id="div1">
+	<div class="row pl-md-2 mt-1 flex-column flex-md-row" id="job-details">
 		<JobDetailsItem :paths="building" :text="company" />
 		<JobDetailsItem :paths="geo" :text="location" />
 		<JobDetailsItem :paths="cash" :text="salary" />
@@ -97,7 +97,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#div1 {
+#job-details {
 	font-size: 0.9em;
+	margin: auto !important;
 }
 </style>
