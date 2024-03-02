@@ -1,7 +1,7 @@
 <template>
   <div id="job-listing">
     <div class="card mb-3 border" id="job-card">
-      <div class="card-body p-3">
+      <div class="card-body p-3" id="job-card-body">
         <div class="row align-items-center">
           <div class="col-md-2 col-4 text-center">
             <img alt="logo empresa" class="rounded img-fluid" id="icon" height="70" :src="icon" width="70" />
@@ -10,7 +10,7 @@
           <div class="col-md-10 col-8">
             <div class="d-flex flex-wrap justify-content-between align-items-center mb-2" id="job-title">
               <a class="text-dark d-flex flex-wrap text-decoration-none" href="#">
-                <h2 class="font-weight-bold mb-0" itemprop="title" id="job-title">{{ name }}</h2>
+                <h2 class="font-weight-bold" itemprop="title" id="job-title">{{ name }}</h2>
 
                 <section class="pl-2 d-inline-flex align-items-center" itemprop="skills">
                   <JobRequirement v-for="(requirement, index) in requirements" :key="index" :text="requirement" />
@@ -59,12 +59,6 @@ export default {
 	width: calc(100% - 1rem) !important;
 }
 
-#job-listing:hover {
-	/* Shadow */
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-	
-}
-
 #job-card {
 	margin: auto;
 	transition: all 0.3s ease-in-out;
@@ -72,13 +66,11 @@ export default {
 	width: calc(100% - 1rem);
 }
 
-#job-card:hover {
-	/* Shadow */
-	box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.1) !important;
+#job-card-body:hover {
+		box-shadow: 10px 10px 5px var( --secondary-color );
 }
 
 #job-title {
-	align-items: center;
 	margin: auto;
 	font-size: 1.1rem;
 	padding: 5px;
