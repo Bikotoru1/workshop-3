@@ -1,6 +1,6 @@
 <template>
-	<div id="job-requirement">
-		<p>{{ text }}</p>
+	<div class="skill-tag text-truncate justify-content-evenly"	id="content" role="button">
+		<span>{{ text }}</span>
 	</div>
 </template>
 
@@ -8,37 +8,41 @@
 export default {
 	name: 'JobRequirement',
 	props: {
-		text: {
-			type: String,
-			required: true
-		}
+		text: String
 	}
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#job-requirement {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--tertiary-color);
-	border-color: var(--tertiary-color);
-	border-style: solid;
-	border-width: 1px !important;
-	border-radius: 10px;
-	margin: 5px;
-	padding: 5px;
-	transition: all 0.2s ease-in-out;
-}
+	#content {
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+		font-size: 0.7em;
+		margin:  0.5rem 0.5rem 0.5rem 0;
+		padding: 0.2rem 0.5rem;
 
-#job-requirement:hover {
-	background-color: var(--tertiary-color);
-	color: var(--secondary-color);
-}
+	}
 
+	.skill-tag {
+		color: var(--tertiary-color);
+		padding: 0.2rem 0.5rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--tertiary-color);
+		transition: all 0.3s ease-in-out;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+	}
 
-h2, p {
-	margin: auto;
-}
+	.skill-tag:hover {
+		box-shadow: 0 0 5px 0 var(--tertiary-color);
+		border: 1px solid var(--primary-color);
+		color: var(--primary-color);
+		cursor: pointer;
+	}
 
+	h2,
+	p {
+		margin: auto;
+	}
 </style>
