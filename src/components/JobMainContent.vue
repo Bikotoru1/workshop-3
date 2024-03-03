@@ -66,8 +66,12 @@ export default {
 	width: calc(100% - 1rem);
 }
 
+#job-card-body {
+	transition: all 0.3s ease-in-out;
+}
+
 #job-card-body:hover {
-		box-shadow: 10px 10px 5px var( --secondary-color );
+		box-shadow: 5px 5px 5px var( --secondary-color );
 }
 
 #job-title {
@@ -80,7 +84,7 @@ export default {
 }
 
 #job-title:hover {
-	font-size: 1.2rem !important;
+	font-size: 1.15rem !important;
 	color: var(--primary-color) !important;
 }
 
