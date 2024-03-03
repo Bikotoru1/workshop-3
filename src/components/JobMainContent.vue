@@ -12,7 +12,7 @@
               <a class="text-dark d-flex flex-wrap text-decoration-none" href="#">
                 <h2 class="font-weight-bold" itemprop="title" id="job-title">{{ name }}</h2>
 
-                <section class="pl-2 d-inline-flex align-items-center" itemprop="skills">
+                <section class="pl-2 d-flex flex-wrap align-items-center" itemprop="skills">
                   <JobRequirement v-for="(requirement, index) in requirements" :key="index" :text="requirement" />
                 </section>
               </a>
