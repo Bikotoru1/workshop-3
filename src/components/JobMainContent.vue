@@ -8,7 +8,7 @@
           </div>
 
           <div class="col-md-10 col-8">
-            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2" id="job-title">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
               <a class="text-dark d-flex flex-wrap text-decoration-none" href="#">
                 <h2 class="font-weight-bold" itemprop="title" id="job-title">{{ name }}</h2>
 
