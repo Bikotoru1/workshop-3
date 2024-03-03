@@ -88,9 +88,10 @@ export default {
 
 #job-card {
   margin: auto;
+  background-color: rgb(204, 204, 204);
   transition: all 0.3s ease-in-out;
   /* Relative width */
-  width: calc(100% - 1rem);
+  width: 100%;
 }
 
 #job-card-body {
@@ -111,8 +112,9 @@ export default {
 }
 
 #job-title:hover {
-  font-size: 1.15rem !important;
   color: var(--primary-color) !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 .bold,
