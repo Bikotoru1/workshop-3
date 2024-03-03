@@ -39,7 +39,7 @@ export default {
         {
           company: "Genuine Digital School",
           icon: "https://s3-us-west-2.amazonaws.com/peaku-public/business/Company/logo_url/530708/Logo-Genuine-Digital-School.jpg",
-          name: "Profesor de tecnologéa",
+          name: "Profesor de tecnología",
           location: "Remoto",
           salary: "Confidencial",
           vacancies: 1,
@@ -49,7 +49,7 @@ export default {
         {
           company: "Genuine Digital School",
           icon: "https://s3-us-west-2.amazonaws.com/peaku-public/business/Company/logo_url/530708/Logo-Genuine-Digital-School.jpg",
-          name: "Líder de tecnologéa",
+          name: "Líder de tecnología",
           location: "Remoto",
           salary: "Confidencial",
           vacancies: 1,
