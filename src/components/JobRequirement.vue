@@ -1,10 +1,12 @@
 <template>
   <div
-    class="skill-tag text-truncate justify-content-evenly"
+    class="skill-tag justify-content-evenly align-items-center d-flex flex-wrap"
     id="content"
     role="button"
   >
-    <span>{{ text }}</span>
+    <i class="fas fa-check-circle">
+      <span class="pl-2">{{ text }}</span>
+    </i>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
   align-items: center;
   text-align: center;
   font-size: 0.7em;
-  margin: 0.5rem 0.5rem 0.5rem 0;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   padding: 0.2rem 0.5rem;
 }
 

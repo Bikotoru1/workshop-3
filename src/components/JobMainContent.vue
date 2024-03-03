@@ -27,7 +27,7 @@
                 </h2>
 
                 <section
-                  class="pl-2 d-flex flex-wrap align-items-center"
+                  class="pl-2 d-flex flex-wrap align-items-center justify-content-evenly"
                   itemprop="skills"
                 >
                   <JobRequirement
@@ -92,6 +92,11 @@ export default {
   transition: all 0.3s ease-in-out;
   /* Relative width */
   width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 #job-card-body {

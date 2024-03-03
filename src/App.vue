@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ul class="row mt-2 no-gutters px-0 col-10">
+    <ul class="row flex-md-row flex-column mb-0 pb-0 list-unstyled w-100">
       <JobListing :jobs="jobs" />
     </ul>
   </div>
@@ -81,6 +81,16 @@ export default {
   --primary-color: black;
   --secondary-color: white;
   --tertiary-color: gray;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  margin: auto;
 }
 
 .b-icon.bi {
