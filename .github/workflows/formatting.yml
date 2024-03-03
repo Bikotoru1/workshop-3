@@ -1,11 +1,10 @@
-# FILEPATH: /home/andres/Documents/GitHub/workshop-3/.github/workflows/formatting.yml
 name: Code Formatting Test
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "dev", "feature/*" ]
   pull_request:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "dev", "feature/*" ]
   workflow_dispatch:
 
 jobs:
@@ -27,3 +26,12 @@ jobs:
 
       - name: Test Code Formatting
         run: npm run lint
+
+      - name: Test Code Formatting
+        run: npm run format:check     
+      
+      - name: Unit Tests
+        run: npm run test
+      
+      - name: Build
+        run: npm run build
