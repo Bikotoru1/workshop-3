@@ -42,10 +42,20 @@ export default {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 h2,
 p {
   margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--tertiary-color);
+}
+
+h2:hover,
+p:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
 }
 </style>

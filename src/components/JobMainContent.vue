@@ -88,9 +88,10 @@ export default {
 
 #job-card {
   margin: auto;
+  background-color: rgb(204, 204, 204);
   transition: all 0.3s ease-in-out;
   /* Relative width */
-  width: calc(100% - 1rem);
+  width: 100%;
 }
 
 #job-card-body {
@@ -102,17 +103,22 @@ export default {
 }
 
 #job-title {
-  margin: auto;
+  margin: 10px;
   font-size: 1.1rem;
   padding: 5px;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   color: var(--tertiary-color);
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  text-align: start;
 }
 
 #job-title:hover {
-  font-size: 1.15rem !important;
   color: var(--primary-color) !important;
+  transform: scale(1.05);
+  margin: calc(10px + 0.05rem);
+  transition: all 0.3s ease-in-out;
 }
 
 .bold,
