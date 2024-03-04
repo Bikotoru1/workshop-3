@@ -1,5 +1,5 @@
 <template>
-  <div id="job-listing">
+  <div id="job-listing" class="container w-100">
     <div class="card mb-3 border" id="job-card">
       <div class="card-body p-3" id="job-card-body">
         <div class="row align-items-center">
@@ -16,18 +16,22 @@
 
           <div class="col-md-10 col-8">
             <div
-              class="d-flex flex-wrap justify-content-between align-items-center mb-2"
+              class="d-flex flex-wrap justify-content-start align-items-center mb-2 mt-2"
             >
               <a
-                class="text-dark d-flex flex-wrap text-decoration-none"
+                class="text-dark d-flex flex-wrap text-decoration-none align-items-center justify-content-start w-100"
                 href="#"
               >
-                <h2 class="font-weight-bold" itemprop="title" id="job-title">
+                <h2
+                  class="font-weight-bold d-flex flex-wrap text-capitalize pl-2 m-0"
+                  itemprop="title"
+                  id="job-title"
+                >
                   {{ name }}
                 </h2>
 
                 <section
-                  class="pl-2 d-flex flex-wrap align-items-center"
+                  class="pl-2 d-flex flex-wrap align-items-center justify-content-start"
                   itemprop="skills"
                 >
                   <JobRequirement
@@ -92,6 +96,11 @@ export default {
   transition: all 0.3s ease-in-out;
   /* Relative width */
   width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 #job-card-body {
@@ -103,6 +112,7 @@ export default {
 }
 
 #job-title {
+  width: max-content !important;
   margin: 10px;
   font-size: 1.1rem;
   padding: 5px;

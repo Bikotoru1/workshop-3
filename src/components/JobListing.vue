@@ -1,7 +1,7 @@
 <template>
   <div id="job-listing">
     <div id="div2" clss="row mt-2 no-gutters">
-      <div id="div3" class="px-0 col-10">
+      <div id="div3" class="px-0 col-10 d-inline">
         <ul id="ul1">
           <JobMainContent
             v-for="(job, index) in jobs"
